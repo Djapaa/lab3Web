@@ -36,6 +36,6 @@ else
     mysqli_query($connect, 
     "INSERT INTO `users` (`id`, `email`, `full_name`, `Surname`, `password`, `avatar`, `hash`)
      VALUES (NULL, '$email', '$full_name', '$surname', '$password', NULL,'$hash')");
-     header('Location: /registration/signin.php');
+     header('Location: /signin');
     }
 

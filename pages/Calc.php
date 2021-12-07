@@ -9,7 +9,7 @@
 </head>
 <body class ="body">
     <div class="container ">
-        <a class="header_reg__title" href="/index.php"><h1>LOGO</h1></a>
+        <!-- <a class="header_reg__title" href="/index.php"><h1>LOGO</h1></a> -->
         <div class ="calc-wrapper">
             <div class ="calc-inner">
                 <form name="form" action="">

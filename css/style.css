@@ -217,6 +217,12 @@ opacity: 0.6;
     margin-right: auto;
     max-width: 650px;
     font-family: 'Montserrat', sans-serif; 
+    
+}
+
+.reg_wrapper__line{
+    border: 1px #000000 solid;
+    
 }
 
 .header_reg__title

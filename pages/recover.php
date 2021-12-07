@@ -1,7 +1,7 @@
 
 <?php 
 // Подключаем к БД
-require_once '../includes/connect.php';
+require_once '../lab3web/includes/connect.php';
  
 // Проверяем нажата ли кнопка отправки формы
 if (isset($_REQUEST['doGo'])) {
@@ -24,7 +24,7 @@ if (isset($_REQUEST['doGo'])) {
                 <title>Подтвердите Email</title>
                 </head>
                 <body>
-                <p>Что бы восстановить пароль перейдите по <a href="http://example.com/newpass.php?hash=' . $hash . '">ссылка</a></p>
+                <p>Что бы восстановить пароль перейдите по <a href="http://example.com/pages/newpass.php?hash=' . $hash . '">ссылка</a></p>
                 </body>
                 </html>
                 ';
@@ -55,33 +55,38 @@ if (isset($_REQUEST['doGo'])) {
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <title>Восстановление пароля</title>
 </head>
-<body class="reg_body">
-    <header class="header_reg">
+<!-- <body class="reg_body"> -->
+    <!-- <header class="header_reg">
       <a class="header_reg__title" href="/index.php"><h1>LOGO</h1></a>
-    </header>
-     <main class="reg_content">
-         <div class="info_center">
-           <div class="siginin_option">
-            </div>
-          </div>
-          <div class="register_form">
-                    <form action="<?= $_SERVER['SCRIPT_NAME'] ?>" method="post" class="form-size">
-                    <div class="field">
-                        <label class="field_item__labal" for="email">Адрес электронной почты:</label>
+    </header> -->
+    
+    <div class="reg_body reg_wrapper__line">
+
+        
+        <main class="reg_content">
+            <div class="info_center">
+                <div class="siginin_option">
+                    </div>
+                </div>
+                <div class="register_form">
+                    <form action="/recover" method="post" class="form-size">
+                        <div class="field">
+                            <label class="field_item__labal" for="email">Адрес электронной почты:</label>
                             <div class="email-input">
                                 <input class="field_item__input" type="email"  id="email" name="email">
-                            </div>
-                            
+                        </div>
+                        
                         <div class="signin-button">
-                                <input  class="signin-button__input" type="submit" value="Отправить" name="doGo"></input>
-                       </div>
+                            <input  class="signin-button__input" type="submit" value="Отправить" name="doGo"></input>
+                        </div>
                     </div>
                 </form>
-         </div>
-          
-     </main>
+            </div>
+            
+        </main>
+    </div>
       <!--<footer>
       </footer>-->
-  </body>
-</body>
+  
+<!-- </body> -->
 </html>

@@ -17,11 +17,11 @@ if(mysqli_num_rows($check_user)>0)
         "email"=>$user['email']
     ];
     
-    header('Location: /myaccount.php');
+    header('Location: /myaccount');
 
 }
 else{
 
     $_SESSION['massage_signin'] = "Неверный email или пароль";
-    header('Location: /registration/signin.php');
+    header('Location: /signin');
 }

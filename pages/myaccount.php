@@ -1,8 +1,10 @@
 <?php
 session_start();
 
+
+
  if(!$_SESSION['user'])
-    header('Location: /registration/signin.php');
+    header('Location: \signin');
 
 
 ?>

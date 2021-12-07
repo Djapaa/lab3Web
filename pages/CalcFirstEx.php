@@ -10,7 +10,7 @@
 <body class="body">
     <div class="container">
         
-        <a class="header_reg__title" href="/index.php"><h1>LOGO</h1></a>
+        <!-- <a class="header_reg__title" href="/index.php"><h1>LOGO</h1></a> -->
         <form class =" formtask" name="formtask" action="">
             <textarea class="input-task" value="" name ="textarea" ></textarea>
             <input class="button-task" type="button" value=" " onclick="add(value)">

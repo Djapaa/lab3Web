@@ -1,6 +1,4 @@
-
-
-        <main class="main">
+<main class="main">
             <div class="container">
                 <div class="main_content">
                     <div class="container1">

@@ -1,7 +1,7 @@
 
 <?php 
 // Подключаем к БД
-require_once '../lab3web/includes/connect.php';
+require_once '../lab3web/application/config/i.php';
  
 // Проверяем нажата ли кнопка отправки формы
 if (isset($_REQUEST['doGo'])) {
@@ -45,7 +45,7 @@ if (isset($_REQUEST['doGo'])) {
 }
 ?>
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -54,7 +54,7 @@ if (isset($_REQUEST['doGo'])) {
     <link href="/css/style.css" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <title>Восстановление пароля</title>
-</head>
+</head> -->
 <!-- <body class="reg_body"> -->
     <!-- <header class="header_reg">
       <a class="header_reg__title" href="/index.php"><h1>LOGO</h1></a>
@@ -89,4 +89,3 @@ if (isset($_REQUEST['doGo'])) {
       </footer>-->
   
 <!-- </body> -->
-</html>

@@ -1,6 +1,11 @@
 
 <?php
-session_start();
+// session_start();
+
+if(!isset($_SESSION)){
+  session_start();
+}
+
 
 ?>
 
@@ -36,7 +41,7 @@ session_start();
           </div>
         </div>
         <div class="register_form">
-          <form action="../includes/signup.php" method="POST" class="form-size" enctype="multipart/form-data">
+          <form action="/application/config/signup.php" method="POST" class="form-size" enctype="multipart/form-data">
             <div class="field">
               <label class="field_item__labal"for="email">Адрас электронной почты:</label>
               <div>
@@ -44,9 +49,10 @@ session_start();
               </div>
               
               <?php
-                      if($_SESSION['email_massage'])
+                      if(isset($_SESSION['email_massage']))
                       {
-                        echo'<span>'. $_SESSION['email_massage'] .'</span>';
+                        $a=$_SESSION['email_massage'];
+                        echo'<span>'. $a .'</span>';
                       }
                       unset($_SESSION['email_massage']);
                       ?>
@@ -59,7 +65,7 @@ session_start();
                     </div>
                     <span>
                       <?php
-                      if($_SESSION['full_name_massage'])
+                      if(isset($_SESSION['full_name_massage']))
                       {
                         echo'<span>'. $_SESSION['full_name_massage'] .'</span>';
                       }
@@ -73,7 +79,7 @@ session_start();
                       <input class="field_item__input" type="text" name="Surname" value="">
                       <span>
                         <?php
-                      if($_SESSION['Surname_massage'])
+                      if(isset($_SESSION['Surname_massage']))
                       {
                         echo'<span>'. $_SESSION['Surname_massage'] .'</span>';
                       }
@@ -88,7 +94,7 @@ session_start();
                     <input class="field_item__input" name="password" type="password" value="">
                     <span>
                       <?php
-                      if($_SESSION['password_massage'])
+                      if(isset($_SESSION['password_massage']))
                       {
                         echo'<span>'. $_SESSION['password_massage'] .'</span>';
                       }

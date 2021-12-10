@@ -1,7 +1,10 @@
 <?php
-session_start();
+//session_start();
+if(!isset($_SESSION)){
+    session_start();
+  }
 
-
+  
 
  if(!$_SESSION['user'])
     header('Location: \signin');
@@ -9,7 +12,7 @@ session_start();
 
 ?>
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -18,20 +21,20 @@ session_start();
     <link href="/css/style.css" rel="stylesheet" type="text/css"/>
     <title>Logo</title>
 </head>
-<body> 
+<body>  -->
 
 <div class="container">
     <div class="header">    
-        <div class="menu-block profile-block">
+        <!-- <div class="menu-block profile-block">
             <a href ="#" class="logo">Logo</a> 
-        </div>
+        </div> -->
 
     <div class="profile__wrapper">
         <div class="profile-info">
             <div class="profile-info__inner">
                 <h2> Здравствуйте, <?= $_SESSION['user']['full_name']." ".$_SESSION['user']['Surname']?></h2>
                 <h2> email: <?= $_SESSION['user']['email']?></h2>
-                <a href="includes/logout.php" class="logout">Выход</a>
+                <a href="/application/config/logout.php" class="logout">Выход</a>
             </div>
             
         </div>

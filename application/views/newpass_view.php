@@ -1,6 +1,6 @@
 
 <?php
-require_once '../includes/connect.php';
+require_once '../lab3web/application/config/i.php';
  
 // Проверка есть ли хеш
 if ($_REQUEST['hash']) {
@@ -28,7 +28,7 @@ if ($_REQUEST['hash']) {
             else{
                 echo "error" . mysqli_error($connect);
             }
-             /*password_hash($pass, PASSWORD_DEFAULT)*/
+           
         } 
     } else {
         echo "Что то пошло не так";
